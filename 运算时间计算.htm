@@ -1,0 +1,22 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>运算时间计算</title>
+	<script>
+	var t1,t2,htime,sum=0;
+	t1=new Date();
+	document.write("循环时间是："+t1.toLocaleString()+":"+t1.getMilliseconds()+"<br/>");
+	for(var i=1;i<=1000;i++){
+	    sum +=i;
+	}
+	t2=new Date();
+	document.write("循环后的时间："+t2.toLocaleString()+":"+t2.getMillisecoonds()+"<br/>");
+	htime=t2.getTime()-t1.getTime();
+	document.write("执行10000次循环用时是："+htime+"毫秒");
+	</script>
+</head>
+
+<body>
+</body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+<title>简易计算器</title>
+	<script>
+		function add(){
+		var a=parseInt(document.getElementById("firstnum").value);
+		var b=parseInt(document.getElementById("secondnum").value);
+		var c=a+b;
+		document.getElementById("result").value=c;
+	}
+	function sub(){
+		var a=parseInt(document.getElementById("firstnum").value);
+		var b=parseInt(document.getElementById("secondnum").value);
+		var c=a-b;
+		document.getElementById("result").value=c;
+	}
+	function mul(){
+		var a=parseInt(document.getElementById("firstnum").value);
+		var b=parseInt(document.getElementById("secondnum").value);
+		var c=a*b;
+		document.getElementById("result").value=c;
+	}
+	function div(){
+		var a=parseInt(document.getElementById("firstnum").value);
+		var b=parseInt(document.getElementById("secondnum").value);
+		var c=a/b;
+		document.getElementById("result").value=c;
+	}																																						
+	</script>
+
+</head>
+<body>
+<h2>简易计算器</h2>
+
+	第一个数：<input type="text" id="firstnum"><br>
+	第二个数：<input type="text" id="secondnum"><br>
+	结果是：<input type="text" id="result"><br>
+	&nbsp
+
+<input type="button" onclick="add()" value="+">
+<input type="button" onclick="sub()" value="-">
+<input type="button" onclick="mul()" value="*">
+<input type="button" onclick="div()" value="/">
+
+
+</body>
+</html>

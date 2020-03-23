@@ -1,0 +1,35 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script type="text/javascript">
+        function insert(){
+            var row1 = document.getElementById("b3");
+            var newRow = document.createElement("li");
+            newRow.innerHTML = "做晚饭";
+            document.getElementById("toDoList").insertBefore(newRow,row1)
+        }
+        function total(){
+           var array =  document.getElementsByTagName("li");
+            alert( array.length);
+        }
+        function all(){
+           var s1 = document.getElementById("b1");
+            var s2 = document.getElementById("b2");
+            var s3 = document.getElementById("b3");
+            document.write(s1.innerHTML+"<br>"+s2.innerHTML+"<br>"+s3.innerHTML);
+        }
+    </script>
+</head>
+<body>
+<h1>things to do</h1>
+<ol id="toDoList">
+    <li id="b1">mow the lawn</li>
+    <li id="b2">clean the window</li>
+    <li id="b3">answer the  email</li>
+</ol>
+<p id="toDo">make sure all these completed</p>
+<input type="button" id="zf" value="插入一行" onclick="insert()">
+<input type="button" id="jd" value="输出子节点" onclick="total()">
+<input type="button" id="nr" value="输出内容" onclick="all()">
+</body>
+</html>

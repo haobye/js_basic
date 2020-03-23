@@ -1,0 +1,30 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>显示系统时间</title>
+	<input name = "abc" type = "button" id = "time">
+	<script type = "text/javascript">
+	function disptime()
+	{
+		var time = new Date();
+		var hour = time.getHours();
+		var minute = time.getMinutes();
+		var second = time.getSeconds();
+		if(minute<10)
+			minute = "0"+minute;
+		if(second<10)
+		second = "0"+second;
+		document.getElementById("time").value = hour+":"+minute+":"+second;
+		var myTime = setTimeout("disptime()",1000);
+	}
+	
+	</script>
+</head>
+
+<body onload = "disptime()">
+
+
+
+</body>
+</html>

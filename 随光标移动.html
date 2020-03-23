@@ -1,0 +1,43 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<style>
+#main{ text-align:center;}
+#adver{
+	position:absolute;
+	left:30px;
+	top:50px;
+	z-index:2;
+	}
+</style>
+<script>
+var adverTop;
+var adverLeft;
+var adverObject;
+function inix(){
+	adverObject = document.getElementById("adver");
+	if(adverObject.currentStyle){
+		adverTop = parseInt(adverObject.currentStyle.top);
+		adverLeft = parseInt(adverObject.currentStyle.left);
+		
+		}
+	else{
+		adverTop = parseInt(document.defaultView.getComputedStyle(adverObject,null).top);
+		adverLeft = parseInt(document.defaultView.getComputedStyle(adverObject,null).left);
+		}
+	}
+function move(){
+	adverObject.style.top = adverTop+parseInt(document.documentElement.scrollTop)+"px";
+	adverObject.style.left = adverLeft+parseInt(document.documentElement.scrollLeft)+"px";
+	}
+window.onload = inix;
+window.onscroll = move;
+</script>
+</head>
+
+<body>
+<div id="adver"><img src="images/advpic.jpg" /> </div>
+<div id="main"><img src="images/contentpic.jpg" /></div>
+</body>
+</html>
